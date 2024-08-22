@@ -1,3 +1,52 @@
+body {
+  background-color: #4285f4;
+}
 
+::selection {
+  color: #fff;
+  background-color: #4285f4;
+}
+
+.wrapper {
+  width: 370px;
+  margin: 85px auto 0;
+}
+
+.select-btn, li {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.select-btn {
+  height: 65px;
+  background-color: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 22px;
+  box-shadow: 0 10px 25px #0000001a;
+}
+
+.wrapper.active .select-btn {
+  transform: rotate(-180deg);
+}
+
+.content {
+  background: #fff;
+  border-radius: 7px;
+  margin-top: 15px;
+  padding: 20px;
+  display: none;
+  box-shadow: 0 10px 25px #0000001a;
+}
+
+.wrapper.active .content {
+  display: block;
+}
+
+.content .search {
+  position: relative;
+}
 
 /*# sourceMappingURL=consultas.1667437d.css.map */

@@ -1,0 +1,50 @@
+body{
+    background-color: #4285f4;
+}
+
+::selection{
+    color: #fff;
+    background-color: #4285f4;
+}
+
+.wrapper{
+    width: 370px;
+    margin: 85px auto 0;
+}
+
+.select-btn,li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select-btn{
+    height: 65px;
+    padding: 0 20px;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 7px;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+}
+
+.wrapper.active .select-btn{
+    transform: rotate(-180deg);
+}
+
+.content{
+    display: none;
+    padding: 20px;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+}
+
+.wrapper.active .content{
+    display: block;
+}
+
+.content .search{
+    position: relative;
+}
