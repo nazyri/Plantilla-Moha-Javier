@@ -16,7 +16,7 @@ boton1.addEventListener("click", function (e) {
     let listaInput = {
         inputNombre: inputNombre,
         inputCorreo: inputCorreo,
-        inputContra: inputContra.value,
+        inputContra: inputContra,
     }
     darDatos(listaInput)
-})
+})  
