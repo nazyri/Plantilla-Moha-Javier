@@ -12,6 +12,8 @@ boton1.addEventListener("click", function (e) {
     }
     else{
      (!inputNombre.value === "" || !inputCorreo.value === "" || inputContra === "")
+     alert("Usuario registrado sastisfactoriamente")
+     window.location.href="login.html"
     }
     let listaInput = {
         inputNombre: inputNombre,

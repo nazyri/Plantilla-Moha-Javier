@@ -565,7 +565,11 @@ boton1.addEventListener("click", function(e) {
     const inputContra = document.getElementById("espacio-contrase\xf1a").value;
     e.preventDefault;
     if (inputNombre.value === "" || inputCorreo.value === "" || inputContra.value === "") alert("Llene todos los espacios");
-    else inputNombre.value, inputCorreo.value, inputContra;
+    else {
+        inputNombre.value, inputCorreo.value, inputContra;
+        alert("Usuario registrado sastisfactoriamente");
+        window.location.href = "login.html";
+    }
     let listaInput = {
         inputNombre: inputNombre,
         inputCorreo: inputCorreo,
