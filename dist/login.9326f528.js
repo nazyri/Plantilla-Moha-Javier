@@ -583,14 +583,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
 async function getDatos() {
     try {
-        // let listaObjetos ={
-        //     nombre: nombre,
-        //     correo: correo,
-        //     clave: clave
-        //    }
-        const response = await fetch("http://localhost:3001/users");
+        const response = await fetch("http://localhost:3002/users");
         if (!response.ok) throw new Error("Error fetching users");
-        // listaObjetos
         const data = await response.json();
         return data;
     } catch (error) {
