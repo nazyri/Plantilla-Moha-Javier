@@ -1,3 +1,16 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "dbd6",
+      "inputNombre": "Javier",
+      "inputCorreo": "fgwrgwg@gmail.com",
+      "inputContra": "1234"
+    },
+    {
+      "id": "fe96",
+      "inputNombre": "Javier",
+      "inputCorreo": "fgwrgwg@gmail.com",
+      "inputContra": "1234"
+    }
+  ]
 }

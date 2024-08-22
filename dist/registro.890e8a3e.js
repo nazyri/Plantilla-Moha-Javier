@@ -600,7 +600,7 @@ async function uploadCheck(id) {
         let task = {
             estado: true
         };
-        const answer = await fetch(`http://localhost:3002/users`, {
+        const answer = await fetch("http://localhost:3002/users", {
             method: "PUT",
             headers: {
                 "Content-type": "application/json"
