@@ -568,12 +568,7 @@ ingresar.addEventListener("click", async (e)=>{
         alert("Rellene todos los espacios");
         return; // Termina la función si algún campo está vacío
     }
-    (0, _fetch.getDatos)(listaObjetos);
-    let listaObjetos = {
-        nombre: nombre,
-        correo: correo,
-        clave: clave
-    };
+    // getDatos()
     // Obtiene los datos de los usuarios
     const usuarios = await (0, _fetch.getDatos)();
     // Verifica si el usuario ingresado coincide
@@ -588,8 +583,14 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
 async function getDatos() {
     try {
+        // let listaObjetos ={
+        //     nombre: nombre,
+        //     correo: correo,
+        //     clave: clave
+        //    }
         const response = await fetch("http://localhost:3001/users");
         if (!response.ok) throw new Error("Error fetching users");
+        // listaObjetos
         const data = await response.json();
         return data;
     } catch (error) {

@@ -12,17 +12,9 @@ ingresar.addEventListener("click", async (e) => {
         alert("Rellene todos los espacios");
         return; // Termina la función si algún campo está vacío
     }
-
-    getDatos(listaObjetos)
-
-    let listaObjetos ={
-    nombre: nombre,
-    correo: correo,
-    clave: clave,
-   }
-
+    // getDatos()
     // Obtiene los datos de los usuarios
-    const usuarios = await getDatos();
+    const usuarios = await getDatos()
 
     // Verifica si el usuario ingresado coincide
     const usuarioValido = usuarios.some(usuario =>
