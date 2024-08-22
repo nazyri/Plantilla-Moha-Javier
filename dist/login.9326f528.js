@@ -573,8 +573,10 @@ ingresar.addEventListener("click", async (e)=>{
     const usuarios = await (0, _fetch.getDatos)();
     // Verifica si el usuario ingresado coincide
     const usuarioValido = usuarios.some((usuario)=>usuario.nombre === nombre && usuario.correo === correo && usuario.clave === clave);
-    if (usuarioValido) alert("Inicio de sesi\xf3n exitoso!");
-    else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
+    if (usuarioValido) {
+        alert("Inicio de sesi\xf3n exitoso!");
+        window.location.href = "src/html/consultas.html";
+    } else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
 });
 
 },{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {
