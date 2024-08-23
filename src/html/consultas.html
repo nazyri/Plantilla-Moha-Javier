@@ -9,48 +9,20 @@
 </head>
 <body>
     <h1>Lista de Consultas</h1>
-    <!-- mostrar la lista de consultas -->
-     <input type="number">
-
-<div class="wrapper">
-    <div class="select-btn">
-        <span>Select your query</span>
-        <i class="uil uil-angle-down"></i>
-    </div>
-    <div class="content">
-        <div class="search">
-            <input type="text" spellcheck="false" placeholder="search">
-        </div>
-        <ul class="options"></ul>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div>
+    <label for="text">Ingrese su nombre</label>
+    <br>
+    <input type="text" id="inputnombre">
+    <br>
     <label for="text">Ingrese su consulta</label>
     <br>
-    <input type="text">
-</div>
+    <input type="text" id="inputconsulta">
+    <br>
+    <label for="fecha">Ingrese la fecha</label>
+    <br>
+    <input type="date" id="inputfecha" required>
+    <br>
+    <button id="guardarconsultas">Agregar Consultas</button>
+    <div id="listaconsultas" class="grid-container"></div>
 
 <script src="/src/jsValidaciones/consultas.js"></script>
 </body>

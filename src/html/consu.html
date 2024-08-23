@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas</title>
+    <style>
+        .consulta-item {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .consulta-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputnombre" placeholder="Nombre">
+    <input type="text" id="inputconsulta" placeholder="Consulta">
+    <input type="date" id="inputfecha">
+    <button id="guardarconsultas">Guardar Consulta</button>
+    
+    <div id="consultas-container">
+        <!-- Las consultas se mostrarán aquí -->
+    </div>
+
+    <!-- Plantilla para una consulta -->
+    <template id="consulta-template">
+        <div class="consulta-item">
+            <p><strong>Nombre:</strong> <span class="nombre"></span></p>
+            <p><strong>Consulta:</strong> <span class="consulta"></span></p>
+            <p><strong>Fecha:</strong> <span class="fecha"></span></p>
+        </div>
+    </template>
+
+    <script src="/src/jsValidaciones/consu.js"></script>
+</body>
+</html>
