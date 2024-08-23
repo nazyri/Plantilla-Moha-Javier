@@ -20,7 +20,7 @@ async function darDatos(){
         console.log(error);
     }
 }
-
+export {darDatos}
 
 
 

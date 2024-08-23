@@ -1,4 +1,4 @@
-import { darDatos } from "./fetch"
+import { darDatos } from "../services/fetch"
 
 const boton1 = document.getElementById("botoncito")
 

@@ -557,7 +557,7 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"krLkd":[function(require,module,exports) {
-var _fetch = require("./fetch");
+var _fetch = require("../services/fetch");
 const boton1 = document.getElementById("botoncito");
 boton1.addEventListener("click", function(e) {
     const inputNombre = document.getElementById("espacio-nombre").value;
@@ -578,43 +578,42 @@ boton1.addEventListener("click", function(e) {
     (0, _fetch.darDatos)(listaInput);
 });
 
-},{"./fetch":"3MHo1"}],"3MHo1":[function(require,module,exports) {
-//POST
+},{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {
+//Post
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
-async function darDatos(obj) {
+parcelHelpers.export(exports, "getDatos", ()=>getDatos);
+async function darDatos() {
     try {
+        let tarea = {
+            id: Date.now(),
+            nombre: inputTask.value,
+            estado: false
+        };
         const respuesta = await fetch("http://localhost:3002/users", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify(obj)
+            body: JSON.stringify(tarea)
         });
         let data = await respuesta.json();
+        getDatos();
         console.log(data);
     } catch (error) {
         console.log(error);
     }
 }
-//PUT
-async function uploadCheck(id) {
+async function getDatos() {
     try {
-        let task = {
-            estado: true
-        };
-        const answer = await fetch("http://localhost:3002/users", {
-            method: "PUT",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(task)
-        });
-        let data = await answer.json();
-        console.log(data);
+        const response = await fetch("http://localhost:3001/users");
+        if (!response.ok) throw new Error("Error fetching users");
+        const data = await response.json();
+        return data;
     } catch (error) {
-        console.log(error);
+        console.error("Error fetching users:", error);
+        return [];
     }
 }
 
