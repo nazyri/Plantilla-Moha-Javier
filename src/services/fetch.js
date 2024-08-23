@@ -24,7 +24,7 @@ export {darDatos}
 
 
 
-
+//GET
 
 export async function getDatos() {
     try {

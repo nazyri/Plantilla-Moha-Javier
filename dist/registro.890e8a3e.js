@@ -583,6 +583,7 @@ boton1.addEventListener("click", function(e) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
+//GET
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
 async function darDatos() {
     try {
