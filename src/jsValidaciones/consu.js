@@ -19,6 +19,7 @@ function mostrarConsultas() {
         consultaElement.querySelector(".nombre").textContent = consulta.nombre;
         consultaElement.querySelector(".consulta").textContent = consulta.consultas;
         consultaElement.querySelector(".fecha").textContent = consulta.fecha;
+        consultaElement.querySelector(".time").textContent = consulta.time
 
         // Añadir el elemento al contenedor
         consultasContainer.appendChild(consultaElement);
@@ -30,8 +31,9 @@ guardarConsultas.addEventListener("click", async() => {
     let inputNombre = document.getElementById("inputnombre").value;
     let inputConsultas = document.getElementById("inputconsulta").value;
     let inputFecha = document.getElementById("inputfecha").value;
+    let inputTime = document.getElementById("inputtime").value;
 
-    if (inputNombre === '' || inputConsultas === '' || inputFecha === '') {
+    if (inputNombre === '' || inputConsultas === '' || inputFecha === '' || inputTime === '') {
         alert("Rellene todos los espacios");
         return; // Termina la función si algún campo está vacío
     }
@@ -39,7 +41,8 @@ guardarConsultas.addEventListener("click", async() => {
     let nuevaConsulta = { 
         nombre: inputNombre,
         consultas: inputConsultas,
-        fecha: inputFecha
+        fecha: inputFecha,
+        time: inputTime
     };
 
     listaConsultas.push(nuevaConsulta);
@@ -49,6 +52,7 @@ guardarConsultas.addEventListener("click", async() => {
     document.getElementById("inputnombre").value = '';
     document.getElementById("inputconsulta").value = '';
     document.getElementById("inputfecha").value = '';
+    document.getElementById("inputtime").value = '';
     
     // Actualizar la vista
     mostrarConsultas();

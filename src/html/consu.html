@@ -16,9 +16,24 @@
     </style>
 </head>
 <body>
-    <input type="text" id="inputnombre" placeholder="Nombre">
-    <input type="text" id="inputconsulta" placeholder="Consulta">
+    <!-- <input type="text" id="inputnombre" placeholder="Nombre">
+    <input type="text" id="inputconsulta" placeholder="Consulta"> -->
+    <label for="text">Ingrese su nombre</label>
+    <br>
+    <input type="text" id="inputnombre">
+    <br>
+    <label for="text">Ingrese su consulta</label>
+    <br>
+    <input type="text" id="inputconsulta">
+    <br>
+    <label for="date">Ingrese la fecha</label>
+    <br>
     <input type="date" id="inputfecha">
+    <br>
+    <label for="time">Ingrese la hora</label>
+    <br>
+    <input type="time" id="inputtime">
+    <br>
     <button id="guardarconsultas">Guardar Consulta</button>
     
     <div id="consultas-container">
@@ -31,6 +46,7 @@
             <p><strong>Nombre:</strong> <span class="nombre"></span></p>
             <p><strong>Consulta:</strong> <span class="consulta"></span></p>
             <p><strong>Fecha:</strong> <span class="fecha"></span></p>
+            <p><strong>Hora:</strong> <span class="time"></span></p>
         </div>
     </template>
 
