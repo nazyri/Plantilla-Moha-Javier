@@ -587,8 +587,6 @@ boton1.addEventListener("click", function(e) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
-//GET
-parcelHelpers.export(exports, "getDatos", ()=>getDatos);
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
 async function darDatos(obj) {
     try {
@@ -605,7 +603,8 @@ async function darDatos(obj) {
         console.log(error);
     }
 }
-async function getDatos(obj) {
+//GET
+async function getDatos() {
     try {
         const response = await fetch("http://localhost:3002/users");
         if (!response.ok) throw new Error("Error fetching users");

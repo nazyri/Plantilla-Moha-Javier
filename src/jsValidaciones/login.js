@@ -25,7 +25,7 @@ ingresar.addEventListener("click", async (e) => {
     const usuarios = await getDatos();
 
     // Verifica si el usuario ingresado coincide
-    const usuarioValido = usuarios.some(usuario =>
+    const usuarioValido = usuarios.find(usuario =>
         usuario.nombre === nombre &&
         usuario.correo === correo &&
         usuario.clave === clave
@@ -39,4 +39,3 @@ ingresar.addEventListener("click", async (e) => {
         alert('Nombre de usuario, correo o contraseña incorrectos.');
     }
 });
-getDatos(usuarioValido)

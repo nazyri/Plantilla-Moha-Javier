@@ -14,12 +14,11 @@ async function darDatos(obj){
         console.log(error);
     }
 }
-export {darDatos}
 
 
 //GET
 
-export async function getDatos(obj) {
+async function getDatos() {
     try {
         const response = await fetch('http://localhost:3002/users');
         if (!response.ok) {
@@ -32,4 +31,4 @@ export async function getDatos(obj) {
         return [];
     }
 }
-export { getDatos}
+export { darDatos, getDatos };
