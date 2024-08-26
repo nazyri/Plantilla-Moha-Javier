@@ -23,6 +23,18 @@
       "inputNombre": "Juan",
       "inputCorreo": "juan70@gmail.com",
       "inputContra": "1234"
+    },
+    {
+      "id": "1f2c",
+      "inputNombre": "Javier Solis Retana",
+      "inputCorreo": "jasore2003@gmail.com",
+      "inputContra": "12345"
+    },
+    {
+      "id": "2354",
+      "inputNombre": "Javier Solis Retana",
+      "inputCorreo": "jasore2003@gmail.com",
+      "inputContra": "6969"
     }
   ]
 }
