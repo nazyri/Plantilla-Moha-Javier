@@ -568,24 +568,50 @@ ingresar.addEventListener("click", async (e)=>{
         alert("Rellene todos los espacios");
         return; // Termina la función si algún campo está vacío
     }
-    (0, _fetch.getDatos)(listaObjetos);
-    let listaObjetos = {
-        nombre: nombre,
-        correo: correo,
-        clave: clave
-    };
+    //     getDatos(listaObjetos)
+    //     let listaObjetos ={
+    //     nombre: nombre,
+    //     correo: correo,
+    //     clave: clave,
+    //    }
     // Obtiene los datos de los usuarios
     const usuarios = await (0, _fetch.getDatos)();
     // Verifica si el usuario ingresado coincide
     const usuarioValido = usuarios.some((usuario)=>usuario.nombre === nombre && usuario.correo === correo && usuario.clave === clave);
-    if (usuarioValido) alert("Inicio de sesi\xf3n exitoso!");
-    else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
+    if (usuarioValido) {
+        alert("Inicio de sesi\xf3n exitoso!");
+        window.location.href = "principal.html";
+    } else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
 });
 
 },{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {
+//Post
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "darDatos", ()=>darDatos);
+//GET
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
+async function darDatos() {
+    try {
+        let tarea = {
+            id: Date.now(),
+            nombre: inputTask.value,
+            estado: false
+        };
+        const respuesta = await fetch("http://localhost:3002/users", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(tarea)
+        });
+        let data = await respuesta.json();
+        getDatos();
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 async function getDatos() {
     try {
         const response = await fetch("http://localhost:3001/users");
