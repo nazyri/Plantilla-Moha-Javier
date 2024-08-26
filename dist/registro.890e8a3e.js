@@ -560,22 +560,26 @@ function hmrAccept(bundle, id) {
 var _fetch = require("../services/fetch");
 const boton1 = document.getElementById("botoncito");
 boton1.addEventListener("click", function(e) {
+    e.preventDefault(); // Corrección aquí: se debe llamar a la función con paréntesis
+    // Obtener los valores de los campos
     const inputNombre = document.getElementById("espacio-nombre").value;
     const inputCorreo = document.getElementById("espacio-correo").value;
     const inputContra = document.getElementById("espacio-contrase\xf1a").value;
-    e.preventDefault;
-    if (inputNombre.value === "" || inputCorreo.value === "" || inputContra.value === "") alert("Llene todos los espacios");
+    // Verificar si alguno de los campos está vacío
+    if (inputNombre === "" || inputCorreo === "" || inputContra === "") alert("Llene todos los espacios");
     else {
-        inputNombre.value, inputCorreo.value, inputContra;
-        alert("Usuario registrado sastisfactoriamente");
+        // Aquí se puede manejar el registro exitoso
+        alert("Usuario registrado satisfactoriamente");
         window.location.href = "login.html";
+        // Crear el objeto con los datos del formulario
+        let listaInput = {
+            inputNombre: inputNombre,
+            inputCorreo: inputCorreo,
+            inputContra: inputContra
+        };
+        // Llamar a la función darDatos que se encarga de enviar los datos al servidor
+        (0, _fetch.darDatos)(listaInput);
     }
-    let listaInput = {
-        inputNombre: inputNombre,
-        inputCorreo: inputCorreo,
-        inputContra: inputContra
-    };
-    (0, _fetch.darDatos)(listaInput);
 });
 
 },{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {

@@ -3,76 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla con 5 Columnas y Botones</title>
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Acciones</th>
-                <th>Nombre</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Detalle de la Consulta</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                    <button>Aceptar</button>
-                </td>
-                <td>Juan Pérez</td>
-                <td>2024-08-26</td>
-                <td>10:00</td>
-                <td>Consulta general sobre el estado del proyecto.</td>
-            </tr>
-            <tr>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                    <button>Aceptar</button>
-                </td>
-                <td>Ana Gómez</td>
-                <td>2024-08-27</td>
-                <td>11:30</td>
-                <td>Revisión de documentos y ajuste de presupuesto.</td>
-            </tr>
-            <tr>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                    <button>Aceptar</button>
-                </td>
-                <td>Carlos Martínez</td>
-                <td>2024-08-28</td>
-                <td>14:00</td>
-                <td>Consulta técnica sobre la implementación de software.</td>
-            </tr>
-            <tr>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                    <button>Aceptar</button>
-                </td>
-                <td>Laura Fernández</td>
-                <td>2024-08-29</td>
-                <td>09:15</td>
-                <td>Discusión sobre la estrategia de marketing.</td>
-            </tr>
-            <tr>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                    <button>Aceptar</button>
-                </td>
-                <td>Pedro Sánchez</td>
-                <td>2024-08-30</td>
-                <td>16:45</td>
-                <td>Actualización de datos financieros.</td>
-            </tr>
-        </tbody>
-    </table>
+    <header id="main-header" class="site-header">
+        <h1>Bienvenido a Mi Página</h1>
+    </header>
+
+    <nav id="main-nav" class="site-navigation">
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="content-section">
+        <h2>Inicio</h2>
+        <p>Este es el contenido de la sección de inicio.</p>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>Acerca de</h2>
+        <p>Este es el contenido de la sección acerca de.</p>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contacto</h2>
+        <p>Este es el contenido de la sección de contacto.</p>
+    </section>
+
+    <footer id="main-footer" class="site-footer">
+        <p>&copy; 2024 Mi Página</p>
+    </footer>
+
+
+
+    <script src="/src/js/estadisticas.js"></script>
 </body>
 </html>

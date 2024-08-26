@@ -1,0 +1,63 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del encabezado */
+#main-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 2em;
+}
+
+/* Estilos de la navegación */
+#main-nav {
+    background-color: #343a40;
+    padding: 10px;
+}
+
+.site-navigation ul {
+    list-style-type: none;
+}
+
+.site-navigation ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.site-navigation ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Estilos de las secciones de contenido */
+.content-section {
+    padding: 20px;
+    margin: 10px;
+}
+
+#home {
+    background-color: #e9ecef;
+}
+
+#about {
+    background-color: #f1f3f5;
+}
+
+#contact {
+    background-color: #dee2e6;
+}
+
+/* Estilos del pie de página */
+#main-footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
