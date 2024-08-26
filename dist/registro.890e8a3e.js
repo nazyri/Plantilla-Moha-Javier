@@ -589,6 +589,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
 //GET
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
+parcelHelpers.export(exports, "getDatos", ()=>getDatos);
 async function darDatos(obj) {
     try {
         const respuesta = await fetch("http://localhost:3002/users", {
@@ -604,9 +605,9 @@ async function darDatos(obj) {
         console.log(error);
     }
 }
-async function getDatos() {
+async function getDatos(obj) {
     try {
-        const response = await fetch("http://localhost:3001/users");
+        const response = await fetch("http://localhost:3002/users");
         if (!response.ok) throw new Error("Error fetching users");
         const data = await response.json();
         return data;

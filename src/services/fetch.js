@@ -17,12 +17,11 @@ async function darDatos(obj){
 export {darDatos}
 
 
-
 //GET
 
-export async function getDatos() {
+export async function getDatos(obj) {
     try {
-        const response = await fetch('http://localhost:3001/users');
+        const response = await fetch('http://localhost:3002/users');
         if (!response.ok) {
             throw new Error('Error fetching users');
         }
@@ -33,3 +32,4 @@ export async function getDatos() {
         return [];
     }
 }
+export { getDatos}

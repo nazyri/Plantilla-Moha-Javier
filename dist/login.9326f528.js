@@ -577,12 +577,13 @@ ingresar.addEventListener("click", async (e)=>{
     // Obtiene los datos de los usuarios
     const usuarios = await (0, _fetch.getDatos)();
     // Verifica si el usuario ingresado coincide
-    const usuarioValido = usuarios.some((usuario)=>usuario.nombre === nombre && usuario.correo === correo && usuario.clave === clave);
-    if (usuarioValido) {
+    const usuarioValido1 = usuarios.some((usuario)=>usuario.nombre === nombre && usuario.correo === correo && usuario.clave === clave);
+    if (usuarioValido1) {
         alert("Inicio de sesi\xf3n exitoso!");
-        window.location.href = "principal.html";
+        window.location.href = "consultas.html";
     } else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
 });
+(0, _fetch.getDatos)(usuarioValido);
 
 },{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {
 //Post
@@ -591,30 +592,25 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
 //GET
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
-async function darDatos() {
+parcelHelpers.export(exports, "getDatos", ()=>getDatos);
+async function darDatos(obj) {
     try {
-        let tarea = {
-            id: Date.now(),
-            nombre: inputTask.value,
-            estado: false
-        };
         const respuesta = await fetch("http://localhost:3002/users", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify(tarea)
+            body: JSON.stringify(obj)
         });
         let data = await respuesta.json();
-        getDatos();
         console.log(data);
     } catch (error) {
         console.log(error);
     }
 }
-async function getDatos() {
+async function getDatos(obj) {
     try {
-        const response = await fetch("http://localhost:3001/users");
+        const response = await fetch("http://localhost:3002/users");
         if (!response.ok) throw new Error("Error fetching users");
         const data = await response.json();
         return data;

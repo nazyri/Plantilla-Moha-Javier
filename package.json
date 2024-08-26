@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/html/registro.html --open"
+    "start": "parcel src/html/login.html --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.2"
   }
 }

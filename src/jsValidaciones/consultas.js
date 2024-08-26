@@ -17,6 +17,7 @@ function mostrarConsultas() {
 
         // Rellenar el contenido de la plantilla
         consultaElement.querySelector(".nombre").textContent = consulta.nombre;
+        consultaElement.querySelector(".tipoconsulta").textContent = consulta.tipoConsulta;
         consultaElement.querySelector(".consulta").textContent = consulta.consultas;
         consultaElement.querySelector(".fecha").textContent = consulta.fecha;
         consultaElement.querySelector(".time").textContent = consulta.time
@@ -29,11 +30,12 @@ function mostrarConsultas() {
 // Manejar el evento de clic en el botón
 guardarConsultas.addEventListener("click", async() => {
     let inputNombre = document.getElementById("inputnombre").value;
+    let select = document.getElementById("select").value;
     let inputConsultas = document.getElementById("inputconsulta").value;
     let inputFecha = document.getElementById("inputfecha").value;
     let inputTime = document.getElementById("inputtime").value;
 
-    if (inputNombre === '' || inputConsultas === '' || inputFecha === '' || inputTime === '') {
+    if (inputNombre === '' || inputConsultas === '' || inputFecha === '' || inputTime === '' || select === '') {
         alert("Rellene todos los espacios");
         return; // Termina la función si algún campo está vacío
     }
@@ -41,6 +43,7 @@ guardarConsultas.addEventListener("click", async() => {
     // 
     let nuevaConsulta = { 
         nombre: inputNombre,
+        tipoConsulta: select,
         consultas: inputConsultas,
         fecha: inputFecha,
         time: inputTime
@@ -51,6 +54,7 @@ guardarConsultas.addEventListener("click", async() => {
     
     // Limpiar los inputs
     document.getElementById("inputnombre").value = '';
+    document.getElementById("select").value = '';
     document.getElementById("inputconsulta").value = '';
     document.getElementById("inputfecha").value = '';
     document.getElementById("inputtime").value = '';
