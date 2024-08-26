@@ -13,18 +13,14 @@ ingresar.addEventListener("click", async (e) => {
         return; // Termina la función si algún campo está vacío
     }
 
-//     getDatos(listaObjetos)
 
-//     let listaObjetos ={
-//     nombre: nombre,
-//     correo: correo,
-//     clave: clave,
-//    }
+
 
     // Obtiene los datos de los usuarios
     const usuarios = await getDatos();
 
     // Verifica si el usuario ingresado coincide
+    // find o some
     const usuarioValido = usuarios.find(usuario =>
         usuario.nombre === nombre &&
         usuario.correo === correo &&
