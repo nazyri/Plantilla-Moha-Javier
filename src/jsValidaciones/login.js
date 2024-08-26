@@ -34,6 +34,7 @@ ingresar.addEventListener("click", async (e) => {
     if (usuarioValido) {
         alert('Inicio de sesión exitoso!');
         window.location.href="principal.html"
+        
     } else {
         alert('Nombre de usuario, correo o contraseña incorrectos.');
     }
