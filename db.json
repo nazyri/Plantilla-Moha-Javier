@@ -1,84 +1,6 @@
 {
   "users": [
     {
-      "id": "dbd6",
-      "inputNombre": "Javier",
-      "inputCorreo": "fgwrgwg@gmail.com",
-      "inputContra": "1234"
-    },
-    {
-      "id": "fe96",
-      "inputNombre": "Javier",
-      "inputCorreo": "fgwrgwg@gmail.com",
-      "inputContra": "1234"
-    },
-    {
-      "id": "9d5b",
-      "inputNombre": "Javier",
-      "inputCorreo": "jasore20@gmail.com",
-      "inputContra": "12234"
-    },
-    {
-      "id": "0482",
-      "inputNombre": "Juan",
-      "inputCorreo": "juan70@gmail.com",
-      "inputContra": "1234"
-    },
-    {
-      "id": "1f2c",
-      "inputNombre": "Javier Solis Retana",
-      "inputCorreo": "jasore2003@gmail.com",
-      "inputContra": "12345"
-    },
-    {
-      "id": "2354",
-      "inputNombre": "Javier Solis Retana",
-      "inputCorreo": "jasore2003@gmail.com",
-      "inputContra": "6969"
-    },
-    {
-      "id": "3cd7",
-      "inputNombre": "Moha",
-      "inputCorreo": "fgwrgwg@gmail.com",
-      "inputContra": "6969"
-    },
-    {
-      "id": "6daf",
-      "inputNombre": "Javier",
-      "inputCorreo": "dsad",
-      "inputContra": "1234"
-    },
-    {
-      "id": "63b7",
-      "inputNombre": "Javier Solis Retana",
-      "inputCorreo": "fgwrgwg@gmail.com",
-      "inputContra": "7070"
-    },
-    {
-      "id": "6c91",
-      "inputNombre": "Javier Solis Retana",
-      "inputCorreo": "fgwrgwg@gmail.com",
-      "inputContra": "1234"
-    },
-    {
-      "id": "908e",
-      "inputNombre": "Javier",
-      "inputCorreo": "javier@.com",
-      "inputContra": "1234"
-    },
-    {
-      "id": "8109",
-      "inputNombre": "Pepita",
-      "inputCorreo": "pepita@gmail.com",
-      "inputContra": "1234"
-    },
-    {
-      "id": "3bf7",
-      "inputNombre": "jos",
-      "inputCorreo": "jos@gamil.com",
-      "inputContra": "123"
-    },
-    {
       "id": "0b33",
       "inputNombre": "Naomy",
       "inputCorreo": "naomy@gmail.com",
@@ -90,20 +12,27 @@
       "inputCorreo": "jasore2003@gmail.com",
       "inputContra": "2020",
       "inputID": "180"
-    }
-  ],
-  "usuarios": [
-    {
-      "codigo": "1111",
-      "id": "ee7e"
     },
     {
-      "codigo": "2222",
-      "id": "2e9b"
+      "id": "89d1",
+      "inputNombre": "Javier Solis Retana",
+      "inputCorreo": "juan70@gmail.com",
+      "inputContra": "1234",
+      "inputID": "128"
     },
     {
-      "codigo": "1234",
-      "id": "8218"
+      "id": "6df2",
+      "inputNombre": "Javier Solis Retana",
+      "inputCorreo": "jasore20@gmail.com",
+      "inputContra": "6060",
+      "inputID": "0987"
+    },
+    {
+      "id": "3e4d",
+      "inputNombre": "Edgar",
+      "inputCorreo": "fgwrgwg@gmail.com",
+      "inputContra": "1234",
+      "inputID": "7676"
     }
   ]
 }

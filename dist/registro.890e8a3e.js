@@ -559,57 +559,68 @@ function hmrAccept(bundle, id) {
 },{}],"krLkd":[function(require,module,exports) {
 var _fetch = require("../services/fetch");
 const boton1 = document.getElementById("botoncito");
-boton1.addEventListener("click", function(e) {
-    e.preventDefault(); // Corrección aquí: se debe llamar a la función con paréntesis
-    // Obtener los valores de los campos
-    const inputNombre = document.getElementById("espacio-nombre").value;
-    const inputCorreo = document.getElementById("espacio-correo").value;
-    const inputContra = document.getElementById("espacio-contrase\xf1a").value;
-    const inputID = document.getElementById("espacio-ID").value;
-    // Verificar si alguno de los campos está vacío
-    if (inputNombre === "" || inputCorreo === "" || inputContra === "") alert("Llene todos los espacios");
-    else {
-        // Aquí se puede manejar el registro exitoso
+boton1.addEventListener("click", async function(e) {
+    e.preventDefault();
+    const obtenerDatosFormulario = ()=>{
+        return {
+            inputNombre: document.getElementById("espacio-nombre").value,
+            inputCorreo: document.getElementById("espacio-correo").value,
+            inputContra: document.getElementById("espacio-contrase\xf1a").value,
+            inputID: document.getElementById("espacio-ID").value
+        };
+    };
+    const { inputNombre , inputCorreo , inputContra , inputID  } = obtenerDatosFormulario();
+    if (!inputNombre || !inputCorreo || !inputContra) {
+        alert("Llene todos los espacios");
+        return;
+    }
+    const listaInput = {
+        inputNombre,
+        inputCorreo,
+        inputContra,
+        inputID
+    };
+    try {
+        await (0, _fetch.darDatos)(listaInput);
         alert("Usuario registrado satisfactoriamente");
         window.location.href = "login.html";
-        // Crear el objeto con los datos del formulario
-        let listaInput = {
-            inputNombre: inputNombre,
-            inputCorreo: inputCorreo,
-            inputContra: inputContra,
-            inputID: inputID
-        };
-        // Llamar a la función darDatos que se encarga de enviar los datos al servidor
-        (0, _fetch.darDatos)(listaInput);
+    } catch (error) {
+        console.error("Error al registrar el usuario:", error);
+        alert("Hubo un problema al registrar el usuario. Int\xe9ntelo de nuevo.");
     }
 });
 
 },{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {
-//Post
+// POST
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
-async function darDatos(obj1) {
+parcelHelpers.export(exports, "eliminarLista", ()=>eliminarLista);
+parcelHelpers.export(exports, "actualizarLista", ()=>actualizarLista);
+async function darDatos(obj) {
     try {
         const respuesta = await fetch("http://localhost:3002/users", {
             method: "POST",
             headers: {
-                "Content-type": "application/json; charset=UTF-8"
+                "Content-Type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify(obj1)
+            body: JSON.stringify(obj)
         });
-        let data = await respuesta.json();
+        if (!respuesta.ok) throw new Error(`Error en la solicitud POST: ${respuesta.statusText}`);
+        const data = await respuesta.json();
         console.log(data);
+        return data;
     } catch (error) {
-        console.log(error);
+        console.error("Error en darDatos:", error);
+        return null;
     }
 }
-//GET
+// GET
 async function getDatos() {
     try {
         const response = await fetch("http://localhost:3002/users");
-        if (!response.ok) throw new Error("Error fetching users");
+        if (!response.ok) throw new Error(`Error fetching users: ${response.statusText}`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -617,39 +628,38 @@ async function getDatos() {
         return [];
     }
 }
-//Delete
-async function eliminarLista() {
+// DELETE
+async function eliminarLista(id) {
     try {
-        const response = await fetch("http://localhost:3002/users", {
+        const response = await fetch(`http://localhost:3002/users/${id}`, {
             method: "DELETE",
-            mode: "cors",
-            credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json"
             }
         });
+        if (!response.ok) throw new Error(`Error en la solicitud DELETE: ${response.statusText}`);
         const data = await response.json();
         return data;
-    } catch (e) {
-        console.log(e);
+    } catch (error) {
+        console.error("Error en eliminarLista:", error);
         return null;
     }
 }
-async function actualizarLista() {
+// PUT
+async function actualizarLista(obj) {
     try {
-        let response = await fetch("http://localhost:3002/users", {
+        const response = await fetch("http://localhost:3002/users", {
             method: "PUT",
-            mode: "cors",
-            credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(obj)
         });
-        let data = await response.json();
+        if (!response.ok) throw new Error(`Error en la solicitud PUT: ${response.statusText}`);
+        const data = await response.json();
         return data;
-    } catch (e) {
-        console.log(e);
+    } catch (error) {
+        console.error("Error en actualizarLista:", error);
         return null;
     }
 }
