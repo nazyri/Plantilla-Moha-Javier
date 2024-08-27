@@ -588,14 +588,14 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
-async function darDatos(obj) {
+async function darDatos(obj1) {
     try {
         const respuesta = await fetch("http://localhost:3002/users", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify(obj)
+            body: JSON.stringify(obj1)
         });
         let data = await respuesta.json();
         console.log(data);
@@ -613,6 +613,42 @@ async function getDatos() {
     } catch (error) {
         console.error("Error fetching users:", error);
         return [];
+    }
+}
+//Delete
+async function eliminarLista() {
+    try {
+        const response = await fetch("http://localhost:3002/users", {
+            method: "DELETE",
+            mode: "cors",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        const data = await response.json();
+        return data;
+    } catch (e) {
+        console.log(e);
+        return null;
+    }
+}
+async function actualizarLista() {
+    try {
+        let response = await fetch("http://localhost:3002/users", {
+            method: "PUT",
+            mode: "cors",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(obj)
+        });
+        let data = await response.json();
+        return data;
+    } catch (e) {
+        console.log(e);
+        return null;
     }
 }
 

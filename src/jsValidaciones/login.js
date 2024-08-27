@@ -13,9 +13,6 @@ ingresar.addEventListener("click", async (e) => {
         return; // Termina la función si algún campo está vacío
     }
 
-
-
-
     // Obtiene los datos de los usuarios
     const usuarios = await getDatos();
 
@@ -29,7 +26,7 @@ ingresar.addEventListener("click", async (e) => {
 
     if (usuarioValido) {
         alert('Inicio de sesión exitoso!');
-        window.location.href="consultas.html"
+        window.location.href="src/html/consultas.html"
         
     } else {
         alert('Nombre de usuario, correo o contraseña incorrectos.');

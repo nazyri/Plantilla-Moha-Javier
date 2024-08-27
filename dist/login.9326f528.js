@@ -568,39 +568,31 @@ ingresar.addEventListener("click", async (e)=>{
         alert("Rellene todos los espacios");
         return; // Termina la función si algún campo está vacío
     }
-    //     getDatos(listaObjetos)
-    //     let listaObjetos ={
-    //     nombre: nombre,
-    //     correo: correo,
-    //     clave: clave,
-    //    }
     // Obtiene los datos de los usuarios
     const usuarios = await (0, _fetch.getDatos)();
     // Verifica si el usuario ingresado coincide
-    const usuarioValido1 = usuarios.some((usuario)=>usuario.nombre === nombre && usuario.correo === correo && usuario.clave === clave);
-    if (usuarioValido1) {
+    // find o some
+    const usuarioValido = usuarios.find((usuario)=>usuario.nombre === nombre && usuario.correo === correo && usuario.clave === clave);
+    if (usuarioValido) {
         alert("Inicio de sesi\xf3n exitoso!");
-        window.location.href = "consultas.html";
+        window.location.href = "src/html/consultas.html";
     } else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
 });
-(0, _fetch.getDatos)(usuarioValido);
 
 },{"../services/fetch":"hXoqP"}],"hXoqP":[function(require,module,exports) {
 //Post
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "darDatos", ()=>darDatos);
-//GET
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
-parcelHelpers.export(exports, "getDatos", ()=>getDatos);
-async function darDatos(obj) {
+async function darDatos(obj1) {
     try {
         const respuesta = await fetch("http://localhost:3002/users", {
             method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify(obj)
+            body: JSON.stringify(obj1)
         });
         let data = await respuesta.json();
         console.log(data);
@@ -608,7 +600,8 @@ async function darDatos(obj) {
         console.log(error);
     }
 }
-async function getDatos(obj) {
+//GET
+async function getDatos() {
     try {
         const response = await fetch("http://localhost:3002/users");
         if (!response.ok) throw new Error("Error fetching users");
@@ -618,6 +611,41 @@ async function getDatos(obj) {
         console.error("Error fetching users:", error);
         return [];
     }
+}
+//Delete
+async function eliminarLista() {
+    try {
+        const response = await fetch("http://localhost:3002/users", {
+            method: "DELETE",
+            mode: "cors",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        const data = await response.json();
+        return data;
+    } catch (e) {
+        console.log(e);
+        return null;
+    }
+}
+//Put
+try {
+    let response = await fetch("http://localhost:3002/users", {
+        method: "PUT",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(obj)
+    });
+    let data = await response.json();
+    return data;
+} catch (e) {
+    console.log(e);
+    return null;
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {

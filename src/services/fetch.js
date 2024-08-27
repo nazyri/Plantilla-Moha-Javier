@@ -32,3 +32,43 @@ async function getDatos() {
     }
 }
 export { darDatos, getDatos };
+
+//Delete
+
+async function eliminarLista() {
+    try {
+        const response = await fetch('http://localhost:3002/users', {
+        method: "DELETE",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        })
+      const data = await response.json();
+      return data;
+    } catch(e) {
+      console.log(e);
+      return null;
+    }
+}
+  
+
+async function actualizarLista() {
+    try {
+      let response = await fetch('http://localhost:3002/users', {
+        method: "PUT",
+        mode: "cors",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(obj)
+      });
+      let data = await response.json();
+      return data;
+    } catch(e) {
+      console.log(e);
+      return null;
+    }
+}
