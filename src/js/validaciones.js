@@ -9,7 +9,7 @@ boton1.addEventListener("click", function (e) {
     const inputNombre = document.getElementById("espacio-nombre").value;
     const inputCorreo = document.getElementById("espacio-correo").value;
     const inputContra = document.getElementById("espacio-contraseña").value;
-
+    const inputID = document.getElementById("espacio-ID").value
     // Verificar si alguno de los campos está vacío
     if (inputNombre === "" || inputCorreo === "" || inputContra === "") {
         alert("Llene todos los espacios");
@@ -22,7 +22,8 @@ boton1.addEventListener("click", function (e) {
         let listaInput = {
             inputNombre: inputNombre,
             inputCorreo: inputCorreo,
-            inputContra: inputContra
+            inputContra: inputContra,
+            inputID: inputID
         };
 
         // Llamar a la función darDatos que se encarga de enviar los datos al servidor

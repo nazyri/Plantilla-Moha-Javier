@@ -39,7 +39,7 @@
 78C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\timsort\LICENSE.md133687503679693170 0
 74C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src\styles\estadisticas.css133691847169068559 0
 91C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\caniuse-lite\data\regions\NA.js133687503708048202 0
-54C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\db.json133692530619341786 0
+54C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\db.json133692532557411834 0
 78C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\lmdb\src\lmdb-js.h133687503692783086 0
 64C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\package-lock.json133691847168935294 0
 91C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\utils\src\DefaultMap.js133687503683805525 0

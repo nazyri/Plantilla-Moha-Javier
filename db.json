@@ -77,17 +77,33 @@
       "inputNombre": "jos",
       "inputCorreo": "jos@gamil.com",
       "inputContra": "123"
+    },
+    {
+      "id": "0b33",
+      "inputNombre": "Naomy",
+      "inputCorreo": "naomy@gmail.com",
+      "inputContra": "1234"
+    },
+    {
+      "id": "07b9",
+      "inputNombre": "Javier",
+      "inputCorreo": "jasore2003@gmail.com",
+      "inputContra": "2020",
+      "inputID": "180"
     }
   ],
   "usuarios": [
     {
-      "codigo": "1111"
+      "codigo": "1111",
+      "id": "ee7e"
     },
     {
-      "codigo": "2222"
+      "codigo": "2222",
+      "id": "2e9b"
     },
     {
-      "codigo": "1234"
+      "codigo": "1234",
+      "id": "8218"
     }
   ]
 }

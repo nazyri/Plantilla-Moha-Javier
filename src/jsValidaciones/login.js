@@ -7,6 +7,7 @@ ingresar.addEventListener("click", async (e) => {
     let nombre = document.getElementById("nombre").value;
     let correo = document.getElementById("correo").value;
     let clave = document.getElementById("clave").value;
+    
 
     if (nombre === '' || correo === '' || clave === '') {
         alert("Rellene todos los espacios");
