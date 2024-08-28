@@ -1,9 +1,9 @@
-5076
+5074
 91C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\caniuse-lite\data\regions\PS.js133687503708981595 0
 68C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\mdn-data133687503686233523 1
 89C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\source-map\lib\source-node.js133687503683185717 0
 88C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@jridgewell\gen-mapping\dist133687503682030263 1
-59C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\package.json133692948523816208 0
+59C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\package.json133693269932912747 0
 86C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\optimizer-svgo\src133687503678505452 1
 77C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\type-fest\license133687503676646708 0
 101C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\caniuse-lite\data\features\flexbox-gap.js133687503702287468 0
@@ -25,7 +25,7 @@
 69C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\path-type133687503679445755 1
 91C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\weak-lru-cache\rollup.config.js133687503680030500 0
 93C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\csso\lib\replace\property\font.js133687503686576002 0
-51C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist133692948480058309 1
+51C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist133693269935252386 1
 110C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\caniuse-lite\data\features\font-variant-numeric.js133687503702567789 0
 121C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\dot-prop\node_modules\type-fest\source\has-optional-keys.d.ts133691795720645048 0
 114C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest_remap.c133687503690980559 0
@@ -37,9 +37,9 @@
 50C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src133691847169013354 1
 101C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\msgpackr-extract\node_modules\detect-libc133691796601214335 1
 78C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\timsort\LICENSE.md133687503679693170 0
-74C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src\styles\estadisticas.css133692945910620736 0
+74C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src\styles\estadisticas.css133693266303624542 0
 91C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\caniuse-lite\data\regions\NA.js133687503708048202 0
-54C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\db.json133692948869471725 0
+54C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\db.json133693263455251876 0
 78C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\lmdb\src\lmdb-js.h133687503692783086 0
 64C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\package-lock.json133691847168935294 0
 91C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\utils\src\DefaultMap.js133687503683805525 0
@@ -161,7 +161,7 @@
 65C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\chalk133687503681288269 1
 92C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\picocolors\picocolors.browser.js133687503677459509 0
 98C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\term-size\vendor\windows\term-size.exe133687503680611130 0
-73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src\html\estadisticas.html133692950388697603 0
+73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src\html\estadisticas.html133693267875407540 0
 90C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\type-fest\ts41\snake-case.d.ts133687503686960035 0
 69C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\src\js\estadisticas.js133692950156999555 0
 89C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\svgo\plugins\removeViewBox.js133687503690950510 0
@@ -2397,7 +2397,7 @@
 97C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\caniuse-lite\data\features\svg-css.js133687503709754291 0
 78C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\is-extglob\LICENSE133687503678174737 0
 100C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\css-tree\lib\syntax\pseudo\common\nth.js133687503692560805 0
-73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.8230bc79.css133692948479776009 0
+73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.8230bc79.css133693269934959989 0
 83C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\is-extglob\package.json133687503676741585 0
 85C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\is-binary-path\index.d.ts133691795715665016 0
 81C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\types\LICENSE133687503676817206 0
@@ -2908,7 +2908,6 @@
 82C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\domelementtype\lib\esm133687503682253885 1
 93C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\domelementtype\lib\index.d.ts.map133687503681697334 0
 97C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\transformer-babel\src\flow.js133687503683143593 0
-69C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.html133692517248665422 0
 95C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\domelementtype\lib\esm\package.json133687503679728917 0
 104C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@swc\helpers\lib\_tagged_template_literal.js133687503691567028 0
 82C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\dom-serializer\LICENSE133687503676766109 0
@@ -4680,7 +4679,7 @@
 120C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\node-resolver-core\test\fixture\env-dep\package.json133687503692260534 0
 102C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\node-resolver-core\src\builtins.js133687503684081250 0
 106C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\node-resolver-core\src\NodeResolver.js133687503691257092 0
-72C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.890e8a3e.js133692948479976589 0
+72C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.890e8a3e.js133693269935193836 0
 100C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\node-resolver-core\src\_empty.js133687503678525858 0
 85C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\namer-default\lib133687503677578011 1
 94C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\node_modules\@parcel\namer-default\package.json133687503679347333 0
@@ -5059,12 +5058,11 @@
 77C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\consultas.20234797.js.map133692480455924847 0
 73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\consultas.f7e328a5.js133692480455903450 0
 66C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\consultas.html133692480455739233 0
-76C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.1996f4b4.js133692517248665422 0
-80C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.1996f4b4.js.map133692517248715017 0
-77C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.891cea81.css133692517248665422 0
-81C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.891cea81.css.map133692517248715017 0
-76C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.e28bcd0a.js133692517248655329 0
-80C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.e28bcd0a.js.map133692517248715017 0
+76C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.1996f4b4.js133693266306447104 0
+80C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.1996f4b4.js.map133693266306617150 0
+81C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.891cea81.css.map133693266306597143 0
+76C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.e28bcd0a.js133693266306437105 0
+80C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\estadisticas.e28bcd0a.js.map133693266306617150 0
 73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\index.579125c3.js.map133688141154732423 0
 70C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\login.634741bf.css133687699877514500 0
 69C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\login.9326f528.js133692669415692464 0
@@ -5072,6 +5070,6 @@
 85C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\Plantilla-Moha-Javier.59712999.js133688141154651466 0
 73C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\Plantilla.59712999.js133687490470335164 0
 77C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.4703f5d2.css.map133691847168872456 0
-77C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.8230bc79.css.map133692948480058309 0
-76C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.890e8a3e.js.map133692948480058309 0
-65C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.html133692948479776009 0
+77C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.8230bc79.css.map133693269935046432 0
+76C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.890e8a3e.js.map133693269935238841 0
+65C:\Users\jsoli\Downloads\Plantilla-Moha-Javier\dist\registro.html133693269935007973 0

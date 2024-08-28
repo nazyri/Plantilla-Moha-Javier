@@ -25,7 +25,7 @@ document.getElementById("ingresar").addEventListener("click", async (e) => {
 
         if (usuarioValido) {
             alert('Inicio de sesión exitoso!');
-            window.location.href = "estadisticas.html";
+            window.location.href = "consultas.html";
         } else {
             alert('Nombre de usuario, correo o contraseña incorrectos.');
         }

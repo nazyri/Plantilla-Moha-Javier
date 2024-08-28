@@ -54,6 +54,20 @@
       "inputCorreo": "jsjs@gmail.com",
       "inputContra": "1234",
       "inputID": "1234"
+    },
+    {
+      "id": "fd75",
+      "inputNombre": "Juan",
+      "inputCorreo": "juan70@gmail.com",
+      "inputContra": "1234",
+      "inputID": "1234"
+    },
+    {
+      "id": "581f",
+      "inputNombre": "Edgar",
+      "inputCorreo": "juan70@gmail.com",
+      "inputContra": "1234",
+      "inputID": "1234"
     }
   ]
 }
