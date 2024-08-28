@@ -558,6 +558,7 @@ function hmrAccept(bundle, id) {
 
 },{}],"3JcpM":[function(require,module,exports) {
 var _fetch = require("../services/fetch");
+const estadisticas = document.getElementById("estadisticas");
 document.getElementById("ingresar").addEventListener("click", async (e)=>{
     e.preventDefault();
     const nombre = document.getElementById("nombre").value.trim();
@@ -573,7 +574,7 @@ document.getElementById("ingresar").addEventListener("click", async (e)=>{
         const usuarioValido = usuarios.some((usuario)=>usuario.inputNombre === nombre && usuario.inputCorreo === correo && usuario.inputContra === clave && usuario.inputID === codigo);
         if (usuarioValido) {
             alert("Inicio de sesi\xf3n exitoso!");
-            window.location.href = "estadisticas.html";
+            window.location.href = "consultas.html";
         } else alert("Nombre de usuario, correo o contrase\xf1a incorrectos.");
     } catch (error) {
         console.error("Error durante el inicio de sesi\xf3n:", error);
@@ -585,13 +586,33 @@ document.getElementById("ingresar").addEventListener("click", async (e)=>{
 // POST
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "darDatos", ()=>darDatos);
+parcelHelpers.export(exports, "darDatosConsulta", ()=>darDatosConsulta);
 parcelHelpers.export(exports, "getDatos", ()=>getDatos);
+parcelHelpers.export(exports, "getDatosConsul", ()=>getDatosConsul);
 parcelHelpers.export(exports, "eliminarLista", ()=>eliminarLista);
 parcelHelpers.export(exports, "actualizarLista", ()=>actualizarLista);
 async function darDatos(obj) {
     try {
         const respuesta = await fetch("http://localhost:3002/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(obj)
+        });
+        if (!respuesta.ok) throw new Error(`Error en la solicitud POST: ${respuesta.statusText}`);
+        const data = await respuesta.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error("Error en darDatos:", error);
+        return null;
+    }
+}
+// POST
+async function darDatosConsulta(obj) {
+    try {
+        const respuesta = await fetch("http://localhost:3002/consultas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=UTF-8"
@@ -619,10 +640,22 @@ async function getDatos() {
         return [];
     }
 }
+// GET consultas
+async function getDatosConsul() {
+    try {
+        const response = await fetch("http://localhost:3002/consultas");
+        if (!response.ok) throw new Error(`Error fetching users: ${response.statusText}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        return [];
+    }
+}
 // DELETE
 async function eliminarLista(id) {
     try {
-        const response = await fetch(`http://localhost:3002/users/${id}`, {
+        const response = await fetch(`http://localhost:3002/consultas/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

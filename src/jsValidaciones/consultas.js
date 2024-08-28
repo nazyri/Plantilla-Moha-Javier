@@ -1,3 +1,5 @@
+import { darDatos,darDatosConsulta } from "../services/fetch";
+
 let guardarConsultas = document.getElementById("guardarconsultas");
 let consultasContainer = document.getElementById("consultas-container");
 let listaConsultas = JSON.parse(localStorage.getItem("ListaConsultas")) || [];
@@ -49,19 +51,19 @@ guardarConsultas.addEventListener("click", async() => {
         time: inputTime
     };
 
-    listaConsultas.push(nuevaConsulta);
-    localStorage.setItem("ListaConsultas", JSON.stringify(listaConsultas));
-    
+    await darDatosConsulta(nuevaConsulta)
     // Limpiar los inputs
     document.getElementById("inputnombre").value = '';
     document.getElementById("select").value = '';
     document.getElementById("inputconsulta").value = '';
     document.getElementById("inputfecha").value = '';
     document.getElementById("inputtime").value = '';
-    
-    // Actualizar la vista
-    mostrarConsultas();
+   
 });
 
 // Mostrar las consultas al cargar la página
 mostrarConsultas();
+
+estadisticas.addEventListener("click", function () {
+    window.location.href= "estadisticas.html"
+})

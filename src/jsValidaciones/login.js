@@ -1,4 +1,5 @@
 import { getDatos } from "../services/fetch";
+const estadisticas = document.getElementById("estadisticas")
 
 document.getElementById("ingresar").addEventListener("click", async (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ document.getElementById("ingresar").addEventListener("click", async (e) => {
 
         if (usuarioValido) {
             alert('Inicio de sesión exitoso!');
-            window.location.href = "consultas.html";
+            window.location.href= "consultas.html"
         } else {
             alert('Nombre de usuario, correo o contraseña incorrectos.');
         }

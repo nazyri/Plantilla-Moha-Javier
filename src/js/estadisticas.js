@@ -1,19 +1,31 @@
+import { getDatosConsul } from "../services/fetch";
+import { eliminarLista } from "../services/fetch";
 document.addEventListener('DOMContentLoaded', () => {
-    // Data sample
-    const consultas = [
-        { estudiante: 'Juan Pérez', fecha: '2024-08-27', hora: '14:30', detalle: 'Consulta sobre el proyecto.' },
-        { estudiante: 'María López', fecha: '2024-08-28', hora: '09:00', detalle: 'Consulta sobre la tarea.' }
-    ];
-
     const consultasBody = document.getElementById('consultasBody');
+    const editModal = document.getElementById('editModal');
+    const modalInput = document.getElementById('modalInput');
+    const saveBtn = document.getElementById('saveBtn');
+    const closeBtn = document.querySelector('.close');
+    let currentEditIndex = null;
 
-    function renderTable() {
+    // Obtener las consultas del localStorage
+    function getConsultas() {
+        return JSON.parse(localStorage.getItem('ListaConsultas')) || [];
+    }
+
+    // Guardar las consultas en el localStorage
+    function saveConsultas(consultas) {
+        localStorage.setItem('ListaConsultas', JSON.stringify(consultas));
+    }
+
+    function renderTable() { 
         consultasBody.innerHTML = '';
+
+        const consultas = getDatosConsul(); // Obtener las consultas actualizadas
 
         consultas.forEach((consulta, index) => {
             const row = document.createElement('tr');
 
-            // Actions cell
             const actionsCell = document.createElement('td');
             actionsCell.innerHTML = `
                 <button class="edit" onclick="editRow(${index})">Editar</button>
@@ -21,50 +33,72 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="done" onclick="markAsDone(${index})">Listo</button>
             `;
 
-            // Data cells
-            const estudianteCell = document.createElement('td');
-            estudianteCell.textContent = consulta.estudiante;
+            const nombreCell = document.createElement('td');
+            nombreCell.textContent = consulta.nombre;
+
+            const tipoConsultaCell = document.createElement('td');
+            tipoConsultaCell.textContent = consulta.tipoConsulta;
+
+            const consultasCell = document.createElement('td');
+            consultasCell.textContent = consulta.consultas;
 
             const fechaCell = document.createElement('td');
             fechaCell.textContent = consulta.fecha;
 
-            const horaCell = document.createElement('td');
-            horaCell.textContent = consulta.hora;
-
-            const detalleCell = document.createElement('td');
-            detalleCell.textContent = consulta.detalle;
+            const timeCell = document.createElement('td');
+            timeCell.textContent = consulta.time;
 
             row.appendChild(actionsCell);
-            row.appendChild(estudianteCell);
+            row.appendChild(nombreCell);
+            row.appendChild(tipoConsultaCell);
+            row.appendChild(consultasCell);
             row.appendChild(fechaCell);
-            row.appendChild(horaCell);
-            row.appendChild(detalleCell);
+            row.appendChild(timeCell);
 
             consultasBody.appendChild(row);
+          
         });
+       
     }
+  
 
-    // Function to edit a row
     window.editRow = (index) => {
-        const newDetails = prompt('Ingrese los nuevos detalles:', consultas[index].detalle);
-        if (newDetails) {
-            consultas[index].detalle = newDetails;
-            renderTable();
+        const consultas = getConsultas();
+        currentEditIndex = index;
+        modalInput.value = consultas[index].consultas;
+        editModal.style.display = 'block';
+    };
+
+    closeBtn.onclick = () => {
+        editModal.style.display = 'none';
+    };
+
+    window.onclick = (event) => {
+        if (event.target == editModal) {
+            editModal.style.display = 'none';
         }
     };
 
-    // Function to delete a row
-    window.deleteRow = (index) => {
+    saveBtn.onclick = () => {
+        if (currentEditIndex !== null) {
+            const consultas = getConsultas();
+            consultas[currentEditIndex].consultas = modalInput.value;
+            saveConsultas(consultas);
+            renderTable();
+            editModal.style.display = 'none';
+            currentEditIndex = null;
+        }
+    };
+
+    window.deleteRow = async (index) => {
         if (confirm('¿Está seguro de que desea eliminar esta consulta?')) {
-            consultas.splice(index, 1);
-            renderTable();
+           await eliminarLista(index);
         }
     };
+    
 
-    // Function to mark a row as done
     window.markAsDone = (index) => {
         alert('Consulta marcada como lista');
-        // Implement additional logic if needed
     };
 
     renderTable();

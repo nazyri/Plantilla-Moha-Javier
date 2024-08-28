@@ -9,3 +9,27 @@
 .consulta-item p {
     margin: 5px 0;
 }
+
+.nombre{
+    background-color: aqua;
+}
+
+.tipoconsulta{
+    background-color: blueviolet;
+}
+
+.consulta{
+    background-color: brown;
+}
+
+.fecha{
+    background-color: chartreuse;
+}
+
+.time{
+    background-color: darksalmon;
+}
+
+#guardarconsultas{
+    background-color: darkviolet;
+}
