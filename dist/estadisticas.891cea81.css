@@ -1,0 +1,52 @@
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin: 2px;
+  padding: 5px 10px;
+}
+
+button.edit {
+  color: #fff;
+  background-color: #4caf50;
+}
+
+button.delete {
+  color: #fff;
+  background-color: #f44336;
+}
+
+button.done {
+  color: #fff;
+  background-color: #008cba;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+/*# sourceMappingURL=estadisticas.891cea81.css.map */
