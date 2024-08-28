@@ -7,36 +7,32 @@
    <link rel="stylesheet" href="/src/styles/estadisticas.css">
 </head>
 <body>
-    <header id="main-header" class="site-header">
-        <h1>Bienvenido a Mi Página</h1>
-    </header>
-
-    <nav id="main-nav" class="site-navigation">
-        <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Acerca de</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <section id="home" class="content-section">
-        <h2>Inicio</h2>
-        <p>Este es el contenido de la sección de inicio.</p>
-    </section>
-
-    <section id="about" class="content-section">
-        <h2>Acerca de</h2>
-        <p>Este es el contenido de la sección acerca de.</p>
-    </section>
- 
-    <section id="contact" class="content-section">
-        <h2>Contacto</h2>
-        <p>Este es el contenido de la sección de contacto.</p>
-    </section>
-
-    <footer id="main-footer" class="site-footer">
-        <p>&copy; 2024 Mi Página</p>
-    </footer>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Consultas</title>
+<link rel="stylesheet" href="/src/styles/estadisticas.css">
+</head>
+<body>
+    <table id="consultasTable">
+        <thead>
+            <tr>
+                <th>Acciones</th>
+                <th>Estudiante</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody id="consultasBody">
+            <!-- Las filas de la tabla se agregarán aquí mediante JavaScript -->
+        </tbody>
+    </table>
+    <script src="/src/js/estadisticas.js"></script>
+</body>
+</html>
 
 
 

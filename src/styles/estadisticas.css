@@ -1,63 +1,51 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-/* Estilos del encabezado */
-#main-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.site-header h1 {
-    font-size: 2em;
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
 
-/* Estilos de la navegación */
-#main-nav {
-    background-color: #343a40;
-    padding: 10px;
+th {
+    background-color: #f2f2f2;
 }
 
-.site-navigation ul {
-    list-style-type: none;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.site-navigation ul li {
-    display: inline;
-    margin-right: 15px;
+button {
+    margin: 2px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.site-navigation ul li a {
-    color: #ffffff;
-    text-decoration: none;
+button.edit {
+    background-color: #4CAF50;
+    color: white;
 }
 
-/* Estilos de las secciones de contenido */
-.content-section {
-    padding: 20px;
-    margin: 10px;
+button.delete {
+    background-color: #f44336;
+    color: white;
 }
 
-#home {
-    background-color: #e9ecef;
+button.done {
+    background-color: #008CBA;
+    color: white;
 }
 
-#about {
-    background-color: #f1f3f5;
+button:hover {
+    opacity: 0.8;
 }
 
-#contact {
-    background-color: #dee2e6;
-}
-
-/* Estilos del pie de página */
-#main-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-}

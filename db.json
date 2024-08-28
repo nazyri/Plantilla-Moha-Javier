@@ -33,6 +33,27 @@
       "inputCorreo": "fgwrgwg@gmail.com",
       "inputContra": "1234",
       "inputID": "7676"
+    },
+    {
+      "id": "c1f6",
+      "inputNombre": "Javier Solis Retana",
+      "inputCorreo": "javier@gmail.com",
+      "inputContra": "1234",
+      "inputID": "1256"
+    },
+    {
+      "id": "5479",
+      "inputNombre": "Pepe",
+      "inputCorreo": "jasore20@gmail.com",
+      "inputContra": "1234",
+      "inputID": "4455"
+    },
+    {
+      "id": "8539",
+      "inputNombre": "jsjs",
+      "inputCorreo": "jsjs@gmail.com",
+      "inputContra": "1234",
+      "inputID": "1234"
     }
   ]
 }
